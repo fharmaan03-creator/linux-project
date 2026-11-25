@@ -1,0 +1,184 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.6.87.2-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Nov 25 03:56:39 UTC 2026
+
+  System load:  0.3                 Processes:             53
+  Usage of /:   0.1% of 1006.85GB   Users logged in:       0
+  Memory usage: 9%                  IPv4 address for eth0: 172.20.240.101
+  Swap usage:   0%
+
+
+This message is shown once a day. To disable it please create the
+/home/lenovo/.hushlogin file.
+lenovo@Haarith:~$ sudo -i
+[sudo] password for lenovo:
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.6.87.2-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Nov 25 03:56:39 UTC 2026
+
+  System load:  0.3                 Processes:             53
+  Usage of /:   0.1% of 1006.85GB   Users logged in:       0
+  Memory usage: 9%                  IPv4 address for eth0: 172.20.240.101
+  Swap usage:   0%
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+This message is shown once a day. To disable it please create the
+/root/.hushlogin file.
+root@Haarith:~# cd /
+root@Haarith:/# ls
+bin                boot  etc   init  lib.usr-is-merged  lost+found  mnt  proc  run   sbin.usr-is-merged  srv  tmp  var
+bin.usr-is-merged  dev   home  lib   lib64              media       opt  root  sbin  snap                sys  usr
+root@Haarith:/# ls -l
+total 2796
+lrwxrwxrwx   1 root root       7 Apr 22  2024 bin -> usr/bin
+drwxr-xr-x   2 root root    4096 Feb 26  2024 bin.usr-is-merged
+drwxr-xr-x   2 root root    4096 Apr 22  2024 boot
+drwxr-xr-x  15 root root    3860 Nov 25 03:56 dev
+drwxr-xr-x  88 root root    4096 Nov 25 03:56 etc
+drwxr-xr-x   3 root root    4096 Mar 25  2026 home
+-rwxr-xr-x   1 root root 2781552 Oct 10  2025 init
+lrwxrwxrwx   1 root root       7 Apr 22  2024 lib -> usr/lib
+drwxr-xr-x   2 root root    4096 Apr  8  2024 lib.usr-is-merged
+lrwxrwxrwx   1 root root       9 Apr 22  2024 lib64 -> usr/lib64
+drwx------   2 root root   16384 Mar 25  2026 lost+found
+drwxr-xr-x   2 root root    4096 Feb 10  2026 media
+drwxr-xr-x   7 root root    4096 Mar 25  2026 mnt
+drwxr-xr-x   2 root root    4096 Feb 10  2026 opt
+dr-xr-xr-x 241 root root       0 Nov 25 03:56 proc
+drwx------   3 root root    4096 Nov 25 03:56 root
+drwxr-xr-x  19 root root     580 Nov 25 03:56 run
+lrwxrwxrwx   1 root root       8 Apr 22  2024 sbin -> usr/sbin
+drwxr-xr-x   2 root root    4096 Mar 31  2024 sbin.usr-is-merged
+drwxr-xr-x   2 root root    4096 Mar 25  2026 snap
+drwxr-xr-x   2 root root    4096 Feb 10  2026 srv
+dr-xr-xr-x  13 root root       0 Nov 25 03:56 sys
+drwxrwxrwt   8 root root    4096 Nov 25 03:56 tmp
+drwxr-xr-x  12 root root    4096 Feb 10  2026 usr
+drwxr-xr-x  13 root root    4096 Mar 25  2026 var
+root@Haarith:/# etc /
+Command 'etc' not found, did you mean:
+  command 'tc' from deb iproute2 (6.1.0-1ubuntu6.2)
+  command 'dtc' from deb device-tree-compiler (1.7.0-1)
+Try: apt install <deb name>
+root@Haarith:/# pwd
+/
+root@Haarith:/# whoami
+root
+root@Haarith:/# hostname
+Haarith
+root@Haarith:/# cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+root@Haarith:/# mkdir linux-project
+root@Haarith:/# ls
+bin                boot  etc   init  lib.usr-is-merged  linux-project  media  opt   root  sbin                snap  sys  usr
+bin.usr-is-merged  dev   home  lib   lib64              lost+found     mnt    proc  run   sbin.usr-is-merged  srv   tmp  var
+root@Haarith:/# cd linux-project
+root@Haarith:/linux-project# pwd
+/linux-project
+root@Haarith:/linux-project# vi monitor.sh
+root@Haarith:/linux-project# chmod +x monitor.sh
+root@Haarith:/linux-project# ./monitor.sh
+Linux System Monitoring
+--------------------
+HostName
+./monitor.sh: line 5: Hostname: command not found
+--------------------
+Date
+Wed Nov 25 04:11:00 UTC 2026
+--------------------
+Memory Usage
+               total        used        free      shared  buff/cache   available
+Mem:           3.5Gi       376Mi       3.1Gi       3.5Mi        98Mi       3.1Gi
+Swap:          1.0Gi          0B       1.0Gi
+--------------------
+disk usage
+Filesystem      Size  Used Avail Use% Mounted on
+none            1.8G     0  1.8G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+none            1.8G  4.0K  1.8G   1% /mnt/wsl
+drivers         150G  112G   38G  76% /usr/lib/wsl/drivers
+/dev/sdd       1007G  1.4G  955G   1% /
+none            1.8G   72K  1.8G   1% /mnt/wslg
+none            1.8G     0  1.8G   0% /usr/lib/wsl/lib
+rootfs          1.8G  2.7M  1.8G   1% /init
+none            1.8G  524K  1.8G   1% /run
+none            1.8G     0  1.8G   0% /run/lock
+none            1.8G     0  1.8G   0% /run/shm
+none            1.8G   76K  1.8G   1% /mnt/wslg/versions.txt
+none            1.8G   76K  1.8G   1% /mnt/wslg/doc
+C:\             150G  112G   38G  76% /mnt/c
+D:\             164G   76G   89G  46% /mnt/d
+E:\             164G  149G   15G  92% /mnt/e
+tmpfs           360M   20K  360M   1% /run/user/1000
+tmpfs           360M   20K  360M   1% /run/user/0
+--------------------
+System Uptime
+ 04:11:00 up 14 min,  2 users,  load average: 0.00, 0.00, 0.00
+--------------------
+Monitoring Completed
+root@Haarith:/linux-project# ./monitor.sh > report.txt
+./monitor.sh: line 5: Hostname: command not found
+root@Haarith:/linux-project# ./monitor.sh>report.txt
+./monitor.sh: line 5: Hostname: command not found
+root@Haarith:/linux-project# cat report.txt
+Linux System Monitoring
+--------------------
+HostName
+--------------------
+Date
+Wed Nov 25 04:12:22 UTC 2026
+--------------------
+Memory Usage
+               total        used        free      shared  buff/cache   available
+Mem:           3.5Gi       373Mi       3.1Gi       3.5Mi       101Mi       3.1Gi
+Swap:          1.0Gi          0B       1.0Gi
+--------------------
+disk usage
+Filesystem      Size  Used Avail Use% Mounted on
+none            1.8G     0  1.8G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+none            1.8G  4.0K  1.8G   1% /mnt/wsl
+drivers         150G  112G   38G  76% /usr/lib/wsl/drivers
+/dev/sdd       1007G  1.4G  955G   1% /
+none            1.8G   72K  1.8G   1% /mnt/wslg
+none            1.8G     0  1.8G   0% /usr/lib/wsl/lib
+rootfs          1.8G  2.7M  1.8G   1% /init
+none            1.8G  524K  1.8G   1% /run
+none            1.8G     0  1.8G   0% /run/lock
+none            1.8G     0  1.8G   0% /run/shm
+none            1.8G   76K  1.8G   1% /mnt/wslg/versions.txt
+none            1.8G   76K  1.8G   1% /mnt/wslg/doc
+C:\             150G  112G   38G  76% /mnt/c
+D:\             164G   76G   89G  46% /mnt/d
+E:\             164G  149G   15G  92% /mnt/e
+tmpfs           360M   20K  360M   1% /run/user/1000
+tmpfs           360M   20K  360M   1% /run/user/0
+--------------------
+System Uptime
+ 04:12:22 up 15 min,  2 users,  load average: 0.00, 0.00, 0.00
+--------------------
+Monitoring Completed
+root@Haarith:/linux-project#
